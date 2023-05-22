@@ -2,6 +2,42 @@
   font-family: Euclid, sans-serif;
 }
 
+body {
+  background: linear-gradient(0deg, rgb(40, 222, 225) 0%, rgba(66,132,219,1) 26%, rgb(123, 114, 239) 57%, rgb(134, 79, 255) 100%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgb(72, 24, 60) 0%, rgb(79, 22, 125) 50%, rgb(36, 37, 119) 100%);
+  box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.5);
+  opacity: 0.5;
+  z-index: -1;
+}
+
+h1 {
+  color: #ffffff;
+  font-size: 48px;
+  text-align: center;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 20px;
+}
+
 .center {
   display: block;
   text-decoration: none;
@@ -13,14 +49,17 @@
 }
 
 #logo {
-  max-width: 125px;
-  max-height: 125px;
+  max-width: 250px;
+  max-height: 250px;
   margin: 15px auto;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
 }
 
 #logo img {
   height: 100%;
   width: 100%;
+  border-radius: 50%;
 }
 
 #response-text {
